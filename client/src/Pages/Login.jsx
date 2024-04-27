@@ -190,7 +190,7 @@ const Login = ({ setCurrentUser }) => {
                     </p>
 
                     <button
-                      className="btn btn-info bg-cyan-300 text-black rounded-full"
+                      className="btn btn-info p-3 bg-cyan-300 text-black rounded-full"
                       onClick={handleSubmit}
                     >
                       Sign In

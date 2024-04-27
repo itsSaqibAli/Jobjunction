@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { GiPlasticDuck } from "react-icons/gi";
 import { FaJ } from "react-icons/fa6";
 import { request } from "../requestMethods";
 
@@ -250,14 +249,15 @@ const Signup = ({ setCurrentUser }) => {
                     <button className="btn btn-info bg-cyan-300 p-3 text-black rounded-full">
                       Create account
                     </button>
+
+                    <p className="mt-4 text-sm text-gray-500 sm:mt-0 ">
+                      Already have an account? &nbsp;
+                      <Link to="../login" className="text-gray-700 underline">
+                        Sign in
+                      </Link>
+                      .
+                    </p>
                   </div>
-                  <p className="mt-4 text-sm text-gray-500 sm:mt-0 ">
-                    Already have an account? &nbsp;
-                    <Link to="../login" className="text-gray-700 underline">
-                      Sign in
-                    </Link>
-                    .
-                  </p>
                 </div>
               </form>
             </div>

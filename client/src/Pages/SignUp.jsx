@@ -26,35 +26,33 @@ const Signup = ({ setCurrentUser }) => {
               className="absolute inset-0 h-full w-full object-cover opacity0"
             />
 
-<div class="hidden lg:relative lg:block lg:p-12">
-                   
-<a
-                    className="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20"
-                    href="#"
-                  >
-                    <span className="sr-only">Home</span>
-                    <FaJ />
-                    <FaJ />
-                  </a>  
+            <div class="hidden lg:relative lg:block lg:p-12">
+              <a
+                className="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20"
+                href="#"
+              >
+                <span className="sr-only">Home</span>
+                <FaJ />
+                <FaJ />
+              </a>
 
-                   <h2 class="mt-6 text-2xl font-bold text-black sm:text-3xl md:text-4xl">
-                       Welcome to Job Junction
-                   </h2>
-               </div>
-                        </section>
+              <h2 class="mt-6 text-2xl font-bold text-black sm:text-3xl md:text-4xl">
+                Welcome to Job Junction
+              </h2>
+            </div>
+          </section>
 
-                        <main
-                            className="flex items-center justify-center px-5 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
-                            <div className="max-w-xl lg:max-w-3xl">
-                                <div className="relative -mt-16 block lg:hidden">
-                                    <a
-                                        className="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20"
-                                        href="#"
-                                    >
-                                        <span className="sr-only">Home</span>
-                                        <FaJ />
-                                        <FaJ />
-                                    </a>
+          <main className="flex items-center justify-center px-5 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+            <div className="max-w-xl lg:max-w-3xl">
+              <div className="relative -mt-16 block lg:hidden">
+                <a
+                  className="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20"
+                  href="#"
+                >
+                  <span className="sr-only">Home</span>
+                  <FaJ />
+                  <FaJ />
+                </a>
 
                 <h2 className="mt-6 text-2xl font-bold text-black sm:text-3xl md:text-4xl">
                   Welcome to Job Junction
@@ -226,20 +224,20 @@ const Signup = ({ setCurrentUser }) => {
                   />
                 </div>
 
-                                    <div className="col-span-6">
-                                        <p className="text-sm text-gray-500 ">
-                                            By creating an account, you agree to our &nbsp;
-                                            <a href="#" className="text-gray-700 underline ">
-                                                terms and conditions
-                                            </a>
-                                            &nbsp; and &nbsp;
-                                            <a href="#" className="text-gray-700 underline ">
-                                                {" "}
-                                                privacy policy{" "}
-                                            </a>
-                                            .
-                                        </p>
-                                    </div>
+                <div className="col-span-6">
+                  <p className="text-sm text-gray-500 ">
+                    By creating an account, you agree to our &nbsp;
+                    <a href="#" className="text-gray-700 underline ">
+                      terms and conditions
+                    </a>
+                    &nbsp; and &nbsp;
+                    <a href="#" className="text-gray-700 underline ">
+                      {" "}
+                      privacy policy{" "}
+                    </a>
+                    .
+                  </p>
+                </div>
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                   <button
@@ -248,10 +246,11 @@ const Signup = ({ setCurrentUser }) => {
                   >
                     Create account
                   </button>
-                                    <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                                    <button className="btn btn-info bg-cyan-300 p-3 text-black rounded-full">Create account</button>
-
-
+                  <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
+                    <button className="btn btn-info bg-cyan-300 p-3 text-black rounded-full">
+                      Create account
+                    </button>
+                  </div>
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0 ">
                     Already have an account? &nbsp;
                     <Link to="../login" className="text-gray-700 underline">

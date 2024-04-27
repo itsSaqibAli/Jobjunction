@@ -9,9 +9,14 @@ import { request } from "../requestMethods";
 //todo: if already logged in, go to home page
 const Login = ({ setCurrentUser }) => {
   const [userData, setUserData] = useState({});
-  const handleSubmit = () => {
-    const res = request.post("/login", userData);
-    setCurrentUser(res?.data);
+  const handleSubmit = (e) => {
+    try {
+      const res = request.post("/user/login", userData);
+      // setCurrentUser(res?.data);
+      console.log(res);
+    } catch (error) {
+      console.log("err");
+    }
   };
   useEffect(() => {
     console.log(userData);
@@ -131,7 +136,7 @@ const Login = ({ setCurrentUser }) => {
                         type="text"
                         class="w-full rounded-lg bg-base-200 border-gray-300 p-4 pe-12 text-sm shadow-sm"
                         placeholder="Enter email/ phone number"
-                        name="username"
+                        name="loginField"
                         onChange={(e) =>
                           setUserData((p) => ({
                             ...p,
@@ -191,7 +196,7 @@ const Login = ({ setCurrentUser }) => {
 
                     <button
                       className="btn btn-info p-3 bg-cyan-300 text-black rounded-full"
-                      onClick={handleSubmit}
+                      onClick={(e) => handleSubmit(e)}
                     >
                       Sign In
                     </button>

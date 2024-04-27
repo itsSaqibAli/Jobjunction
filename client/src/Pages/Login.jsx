@@ -1,17 +1,25 @@
+/* eslint-disable react/no-unknown-property */
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { GiPlasticDuck } from "react-icons/gi";
 import { FaJ } from "react-icons/fa6";
+import { request } from "../requestMethods";
 
 //todo: if already logged in, go to home page
-const Login = () => {
+const Login = ({ setCurrentUser }) => {
+  const [userData, setUserData] = useState({});
+  const handleSubmit = () => {
+    const res = request.post("/login", userData);
+    setCurrentUser(res?.data);
+  };
+  useEffect(() => {
+    console.log(userData);
+  }, [userData]);
 
   return (
     <section className="sign-in-form section-padding ">
       <section class="bg-white ">
-        
-
         <section class="bg-white ">
           <div class="lg:grid lg:min-h-screen bg-base-100 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] lg:grid-cols-12">
             <section class="relative flex h-32 items-end  lg:col-span-5 border-r-2 border-dotted lg:h-full xl:col-span-6">
@@ -112,9 +120,7 @@ const Login = () => {
                   <span class="h-px flex-1 bg-black"></span>
                 </span>
 
-                <form
-                  class="mx-auto mb-0 mt-8 max-w-md space-y-4"
-                >
+                <form class="mx-auto mb-0 mt-8 max-w-md space-y-4">
                   <div>
                     <label for="email" class="sr-only">
                       Email
@@ -126,7 +132,12 @@ const Login = () => {
                         class="w-full rounded-lg bg-base-200 border-gray-300 p-4 pe-12 text-sm shadow-sm"
                         placeholder="Enter email/ phone number"
                         name="username"
-                 
+                        onChange={(e) =>
+                          setUserData((p) => ({
+                            ...p,
+                            [e.target.name]: e.target.value,
+                          }))
+                        }
                       />
 
                       <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -152,7 +163,12 @@ const Login = () => {
                         class="w-full rounded-lg border-1 bg-base-200 border-gray-300 p-4 pe-12 text-sm shadow-sm"
                         placeholder="Enter password"
                         name="password"
-         
+                        onChange={(e) =>
+                          setUserData((p) => ({
+                            ...p,
+                            [e.target.name]: e.target.value,
+                          }))
+                        }
                       />
 
                       <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -173,7 +189,10 @@ const Login = () => {
                       <Link to="../signup">Sign up</Link>
                     </p>
 
-                    <button className="btn btn-info bg-cyan-300 text-black rounded-full">
+                    <button
+                      className="btn btn-info p-3 bg-cyan-300 text-black rounded-full"
+                      onClick={handleSubmit}
+                    >
                       Sign In
                     </button>
                   </div>

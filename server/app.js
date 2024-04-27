@@ -59,9 +59,9 @@ app.get("/test", async (req, res, next) => {
 
 //defining routers
 // todo: routes here
-// const userRouter = require("./routes/userRouters");
+const userRouter = require("./routes/userRouters");
 // const gymRouter = require("./routes/gymRouters");
-// app.use("/user", userRouter);
+app.use("/user", userRouter);
 // app.use("/gym", gymRouter);
 
 

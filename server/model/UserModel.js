@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
         minLength: [5, "name too short(min=5)!"],
         maxLength: [15, "name too long(max=15)!"],
     }, profilePhoto: String, isEmailVerified: {
-        type: Boolean, default: false,
+        type: Boolean, default: true,
     }, emailVerificationOtp: {
         type: String, select: false
     }, password: {

@@ -6,11 +6,15 @@ import { request } from "../requestMethods";
 //todo: check if all fields are filled
 const Signup = ({ setCurrentUser }) => {
   const [userData, setUserData] = useState({});
+  const [isUser, setIsUser] = useState(true);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await request.post("/user/signup", userData);
+      const res = await request.post(
+        `/${isUser ? "user" : "company"}/signup`,
+        userData
+      );
       setCurrentUser(res?.data?.data?.user);
       console.log(res);
     } catch (error) {
@@ -246,12 +250,6 @@ const Signup = ({ setCurrentUser }) => {
                 </div>
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                  <button
-                    className="btn btn-info bg-cyan-300 text-black rounded-full"
-                    onClick={handleSubmit}
-                  >
-                    Create account
-                  </button>
                   <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                     <button
                       className="btn btn-info bg-cyan-300 p-3 text-black rounded-full"
@@ -270,6 +268,24 @@ const Signup = ({ setCurrentUser }) => {
                   </div>
                 </div>
               </form>
+              <p className="mt-4 text-sm text-gray-500 sm:mt-0 ">
+                {isUser ? (
+                  <span
+                    className="text-gray-700 underline cursor-pointer"
+                    onClick={() => setIsUser((p) => !p)}
+                  >
+                    I am Hiring
+                  </span>
+                ) : (
+                  <span
+                    className="text-gray-700 underline cursor-pointer"
+                    onClick={() => setIsUser((p) => !p)}
+                  >
+                    I want to get Hired
+                  </span>
+                )}
+                .
+              </p>
             </div>
           </main>
         </div>

@@ -24,7 +24,14 @@ const Signup = ({setPhase, formData, setFormData}) => {
 
 <div class="hidden lg:relative lg:block lg:p-12">
                    
-                        
+<a
+                    className="inline-flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20"
+                    href="#"
+                  >
+                    <span className="sr-only">Home</span>
+                    <FaJ />
+                    <FaJ />
+                  </a>  
 
                    <h2 class="mt-6 text-2xl font-bold text-black sm:text-3xl md:text-4xl">
                        Welcome to Job Junction
@@ -41,6 +48,7 @@ const Signup = ({setPhase, formData, setFormData}) => {
                                         href="#"
                                     >
                                         <span className="sr-only">Home</span>
+                                        <FaJ />
                                         <FaJ />
                                     </a>
 
@@ -190,11 +198,11 @@ const Signup = ({setPhase, formData, setFormData}) => {
                                     <div className="col-span-6">
                                         <p className="text-sm text-gray-500 ">
                                             By creating an account, you agree to our &nbsp;
-                                            <a href="https://privacyterms.io/view/dDbASFAX-E9jHmf57-9Eeep9/" className="text-gray-700 underline ">
+                                            <a href="#" className="text-gray-700 underline ">
                                                 terms and conditions
                                             </a>
                                             &nbsp; and &nbsp;
-                                            <a href="https://privacyterms.io/view/DBqEtGlg-CAMLUMSD-9NpuZO/" className="text-gray-700 underline ">
+                                            <a href="#" className="text-gray-700 underline ">
                                                 {" "}
                                                 privacy policy{" "}
                                             </a>
@@ -203,7 +211,7 @@ const Signup = ({setPhase, formData, setFormData}) => {
                                     </div>
 
                                     <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                                    <button className="btn btn-info bg-cyan-300 text-black rounded-full">Create account</button>
+                                    <button className="btn btn-info bg-cyan-300 p-3 text-black rounded-full">Create account</button>
 
 
                                         <p className="mt-4 text-sm text-gray-500 sm:mt-0 ">

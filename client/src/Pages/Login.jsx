@@ -173,7 +173,7 @@ const Login = () => {
                       <Link to="../signup">Sign up</Link>
                     </p>
 
-                    <button className="btn btn-info bg-cyan-300 text-black rounded-full">
+                    <button className="btn btn-info p-3 bg-cyan-300 text-black rounded-full">
                       Sign In
                     </button>
                   </div>

@@ -22,6 +22,8 @@ const userSchema = new mongoose.Schema({
     }, emailVerificationOtp: {
         type: String, select: false
     }, password: {
+
+        //test
         type: String, required: [true, "Please create a password!"], minlength: 8, select: false, //do not select this ever
     }, passwordConfirm: {
         type: String, required: [true, "Please confirm the password!"], validate: {

@@ -4,7 +4,6 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Domains from "./Pages/Domains";
 import Listing from "./Pages/Listing";
-import Profile from "./Pages/Profile";
 import Company from "./Pages/Company";
 import User from "./Pages/User";
 

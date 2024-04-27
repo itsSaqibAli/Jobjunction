@@ -9,18 +9,16 @@ import { request } from "../requestMethods";
 //todo: if already logged in, go to home page
 const Login = ({ setCurrentUser }) => {
   const [userData, setUserData] = useState({});
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
-      const res = request.post("/user/login", userData);
-      // setCurrentUser(res?.data);
+      const res = await request.post("/user/login", userData);
+      setCurrentUser(res?.data?.data?.user);
       console.log(res);
     } catch (error) {
       console.log("err");
     }
   };
-  useEffect(() => {
-    console.log(userData);
-  }, [userData]);
 
   return (
     <section className="sign-in-form section-padding ">

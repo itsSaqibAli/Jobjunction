@@ -7,10 +7,17 @@ import { request } from "../requestMethods";
 const Signup = ({ setCurrentUser }) => {
   const [userData, setUserData] = useState({});
 
-  const handleSubmit = () => {
-    const res = request.post("/signup", userData);
-    setCurrentUser(res?.data);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await request.post("/user/signup", userData);
+      setCurrentUser(res?.data?.data?.user);
+      console.log(res);
+    } catch (error) {
+      console.log("err");
+    }
   };
+
   return (
     <section className=" bg-base-100 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
       <div className="">
@@ -246,7 +253,10 @@ const Signup = ({ setCurrentUser }) => {
                     Create account
                   </button>
                   <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                    <button className="btn btn-info bg-cyan-300 p-3 text-black rounded-full">
+                    <button
+                      className="btn btn-info bg-cyan-300 p-3 text-black rounded-full"
+                      onClick={(e) => handleSubmit(e)}
+                    >
                       Create account
                     </button>
 

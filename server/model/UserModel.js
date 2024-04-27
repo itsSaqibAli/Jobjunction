@@ -34,7 +34,14 @@ const userSchema = new mongoose.Schema({
         },
     }, passwordChangedAt: {
         type: Date,
-    }, passwordResetToken: String, passwordResetExpires: Number, active: Boolean
+    }, passwordResetToken: String, passwordResetExpires: Number, active: Boolean,
+    enrolledIn: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Project'
+    }, submissions: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Submission'
+    }
 });
 
 //before saving, encrypt the password and remove confirm password

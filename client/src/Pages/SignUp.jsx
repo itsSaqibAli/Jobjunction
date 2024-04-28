@@ -4,7 +4,7 @@ import { FaJ } from "react-icons/fa6";
 import { request } from "../requestMethods";
 
 //todo: check if all fields are filled
-const Signup = ({ setCurrentUser }) => {
+const Signup = ({ currentUser, setCurrentUser }) => {
   const [userData, setUserData] = useState({});
   const [isUser, setIsUser] = useState(true);
 

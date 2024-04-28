@@ -21,16 +21,49 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/login"
-          element={<Login setCurrentUser={setCurrentUser} />}
+          element={
+            <Login currentUser={currentUser} setCurrentUser={setCurrentUser} />
+          }
         />
         <Route
           path="/signup"
-          element={<SignUp setCurrentUser={setCurrentUser} />}
+          element={
+            <SignUp currentUser={currentUser} setCurrentUser={setCurrentUser} />
+          }
         ></Route>
-        <Route path="/domains" element={<Domains />}></Route>
-        <Route path="/listing" element={<Listing />}></Route>
-        <Route path="/u/:id" element={<User />}></Route>
-        <Route path="/c/:id" element={<Company />}></Route>
+        <Route
+          path="/domains"
+          element={
+            <Domains
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+            />
+          }
+        ></Route>
+        <Route
+          path="/listing"
+          element={
+            <Listing
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+            />
+          }
+        ></Route>
+        <Route
+          path="/u/:id"
+          element={
+            <User currentUser={currentUser} setCurrentUser={setCurrentUser} />
+          }
+        ></Route>
+        <Route
+          path="/c/:id"
+          element={
+            <Company
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+            />
+          }
+        ></Route>
       </Routes>
     </>
   );

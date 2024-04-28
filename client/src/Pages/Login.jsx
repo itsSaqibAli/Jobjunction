@@ -7,7 +7,7 @@ import { FaJ } from "react-icons/fa6";
 import { request } from "../requestMethods";
 
 //todo: if already logged in, go to home page
-const Login = ({ setCurrentUser }) => {
+const Login = ({ currentUser, setCurrentUser }) => {
   const [userData, setUserData] = useState({});
   const [isUser, setIsUser] = useState(true);
 

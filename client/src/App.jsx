@@ -13,10 +13,15 @@ import EnrollDetail from "./Pages/EnrollDetail";
 import ListingCompany from "./Pages/ListingCompany";
 import Form from "./Pages/Form";
 import User from "./Pages/User";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    console.log(currentUser);
+  }, [currentUser]);
+
   return (
     <>
       <Routes>

@@ -40,8 +40,6 @@ exports.signup = catchAsync(async (req, res, next) => {
 
     if (!req.body.email) return next(new AppError("Email id not provided", 400));
 
-    const otp = Math.floor(1000 + Math.random() * 9000);
-
     // check if the user already exists
     const existingUser = await User.findOne({email: req.body.email});
     if (existingUser) {
@@ -59,11 +57,9 @@ exports.signup = catchAsync(async (req, res, next) => {
         name: req.body.name,
         password: req.body.password,
         passwordConfirm: req.body.passwordConfirm,
-        emailVerificationOtp: otp,
         phone: req.body.phone
     });
 
-    console.log(otp);
 
     //todo: uncomment this=> send email
     //we need a key value for email
@@ -71,9 +67,8 @@ exports.signup = catchAsync(async (req, res, next) => {
     //     email: newUser.email, subject: "Welcome to Duck! Please verify your email", html: `OTP: ${otp}`
     // });
 
-    res.status(200).json({
-        status: "successes", data: {phone: newUser.phone, email: newUser.email, name: newUser.name}
-    })
+    return createSendToken(newUser, 201, res);
+
 });
 
 //checked

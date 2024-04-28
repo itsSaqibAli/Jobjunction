@@ -17,13 +17,15 @@ const cookieParser = require("cookie-parser");
 // security HTTP headers
 app.use(helmet());
 
-app.use(cors({
+app.use(
+  cors({
     origin: ["http://localhost:5173"],
     credentials: true,
-}));
+  })
+);
 
 // read data from the body into req.body, max is 10kb.
-app.use(express.json({limit: "10kb"})); //data from body shall be added to req
+app.use(express.json({ limit: "10kb" })); //data from body shall be added to req
 
 //sanitize against non SQL code injection
 app.use(mongoSanitize());
@@ -34,43 +36,40 @@ app.use(xss());
 
 //adding the request time to req object
 app.use((req, res, next) => {
-    req.requestTime = new Date().toISOString();
-    next();
+  req.requestTime = new Date().toISOString();
+  next();
 });
 
-app.use(cookieParser())
+app.use(cookieParser());
 
 //development dependency, logs the recent request in the console
 if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 app.get("/", (req, res, next) => {
-    res.status(200).json({
-        status: "success",
-        message: "Welcome to JobJunction server!",
-    });
+  res.status(200).json({
+    status: "success",
+    message: "Welcome to JobJunction server!",
+  });
 });
 
 app.get("/test", async (req, res, next) => {
-    res.status(200).json({
-        status: "success",
-        message: "this is for testing functions",
-    })
+  res.status(200).json({
+    status: "success",
+    message: "this is for testing functions",
+  });
 });
 
 //defining routers
 // todo: routes here
-// const userRouter = require("./routes/userRouters");
+const userRouter = require("./routes/userRouters");
 // const gymRouter = require("./routes/gymRouters");
-// app.use("/user", userRouter);
+app.use("/user", userRouter);
 // app.use("/gym", gymRouter);
-
 
 //for undefined routs
 const AppError = require("./util/appError");
 app.all("*", (req, res, next) => {
-    next(
-        new AppError(`Can't find ${req.originalUrl} on Duck server!`, 404)
-    );
+  next(new AppError(`Can't find ${req.originalUrl} on Duck server!`, 404));
 });
 
 //in case of operational error this middleware function will be called to return relevant error message

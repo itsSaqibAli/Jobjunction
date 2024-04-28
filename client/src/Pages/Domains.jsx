@@ -32,7 +32,7 @@ const HomePage = () => {
                                     className="group relative inline-block text-sm font-medium text-slate-500 focus:outline-none   active:text-slate"
                                     href="#"
                                 >
-                                <button className="btn hover:bg-yellow-200 border-none hover:scale-[105%] bg-white text-black rounded-full">View Projects</button>
+                                <button className="btn p-2 hover:bg-yellow-200 border-none hover:scale-[105%] bg-white text-black rounded-full">View Projects</button>
                                 </a>
                             </div>
                         </a>
@@ -50,7 +50,7 @@ const HomePage = () => {
                                     Ios dev
                                 </h3>
 
-                                <button className="btn hover:bg-yellow-200 border-none hover:scale-[105%] bg-white text-black rounded-full">View Projects</button>
+                                <button className="btn p-2 hover:bg-yellow-200 border-none hover:scale-[105%] bg-white text-black rounded-full">View Projects</button>
 
                             </div>
                         </a>
@@ -68,7 +68,7 @@ const HomePage = () => {
                                     Web dev
                                 </h3>
 
-                                <button className="btn hover:bg-yellow-200 border-none hover:scale-[105%] bg-white text-black rounded-full">View Projects</button>
+                                <button className="btn p-2 hover:bg-yellow-200 border-none hover:scale-[105%] bg-white text-black rounded-full">View Projects</button>
 
                             </div>
                         </a>
@@ -85,7 +85,7 @@ const HomePage = () => {
                             <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
                                 <h3 className="text-3xl font-medium text-white font-hihi">Other</h3>
 
-                                <button className="btn hover:bg-yellow-200 border-none hover:scale-[105%] bg-white text-black rounded-full">Coming soon</button>
+                                <button className="btn p-2 hover:bg-yellow-200 border-none hover:scale-[105%] bg-white text-black rounded-full">Coming soon</button>
 
                             </div>
                         </a>

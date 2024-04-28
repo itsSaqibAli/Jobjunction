@@ -259,7 +259,8 @@ const Signup = ({ setCurrentUser }) => {
                     </Link>
                     .
                   </p>
-                </div>
+                  </div>
+                  </div>
               </form>
             </div>
           </main>

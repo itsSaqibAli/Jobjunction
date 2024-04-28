@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [domain, setDomain] = useState("Web");
 
   useEffect(() => {
     console.log(currentUser);
@@ -37,32 +38,22 @@ function App() {
             <Domains
               currentUser={currentUser}
               setCurrentUser={setCurrentUser}
+              domain={domain}
+              setDomain={setDomain}
             />
           }
         ></Route>
         <Route
           path="/listing"
-          element={
-            <Listing
-              currentUser={currentUser}
-              setCurrentUser={setCurrentUser}
-            />
-          }
+          element={<Listing currentUser={currentUser} domain={domain} />}
         ></Route>
         <Route
           path="/u/:id"
-          element={
-            <User currentUser={currentUser} setCurrentUser={setCurrentUser} />
-          }
+          element={<User currentUser={currentUser} />}
         ></Route>
         <Route
           path="/c/:id"
-          element={
-            <Company
-              currentUser={currentUser}
-              setCurrentUser={setCurrentUser}
-            />
-          }
+          element={<Company currentUser={currentUser} />}
         ></Route>
       </Routes>
     </>

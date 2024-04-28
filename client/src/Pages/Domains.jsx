@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Domains = () => {
+const Domains = ({ currentUser, setCurrentUser, domain, setDomain }) => {
+  const navigate = useNavigate();
+  const handleClick = (name) => {
+    setDomain(name);
+    navigate("/listing");
+    console.log("first");
+  };
   return (
     <section>
       <section>
@@ -12,7 +18,10 @@ const Domains = () => {
 
           <ul className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-4">
             <li>
-              <a href="#" className="group relative  block">
+              <div
+                className="group relative  block"
+                onClick={() => handleClick("android")}
+              >
                 <img
                   src="https://images.pexels.com/photos/163065/mobile-phone-android-apps-phone-163065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt=""
@@ -33,10 +42,13 @@ const Domains = () => {
                     </button>
                   </a>
                 </div>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="#" className="group relative block">
+              <div
+                className="group relative block"
+                onClick={() => handleClick("ios")}
+              >
                 <img
                   src="https://images.pexels.com/photos/3586249/pexels-photo-3586249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt=""
@@ -52,10 +64,13 @@ const Domains = () => {
                     View Projects
                   </button>
                 </div>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="#" className="group relative block">
+              <div
+                className="group relative block"
+                onClick={() => handleClick("web")}
+              >
                 <img
                   src="https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt=""
@@ -71,11 +86,14 @@ const Domains = () => {
                     View Projects
                   </button>
                 </div>
-              </a>
+              </div>
             </li>
 
             <li>
-              <a href="#" className="group relative block">
+              <div
+                className="group relative block"
+                onClick={() => handleClick("other")}
+              >
                 <img
                   src="https://images.pexels.com/photos/7650781/pexels-photo-7650781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt=""
@@ -91,7 +109,7 @@ const Domains = () => {
                     Coming soon
                   </button>
                 </div>
-              </a>
+              </div>
             </li>
           </ul>
         </div>

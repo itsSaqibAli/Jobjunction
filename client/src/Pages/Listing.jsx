@@ -20,7 +20,7 @@ const Notification = () => {
               {/* {View} */}
             </div>
           </section>{" "}
-<div class="container bg-gray-50 min-h-screen p-8 antialiased">
+<div class="container mx-auto bg-gray-50 min-h-screen p-8 antialiased">
    <div >
    
       <div class="bg-gray-100 mx-auto  border-gray-500 border rounded-sm  text-gray-700 mb-0.5">

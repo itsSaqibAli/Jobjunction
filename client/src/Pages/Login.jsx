@@ -9,10 +9,15 @@ import { request } from "../requestMethods";
 //todo: if already logged in, go to home page
 const Login = ({ setCurrentUser }) => {
   const [userData, setUserData] = useState({});
+  const [isUser, setIsUser] = useState(true);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await request.post("/user/login", userData);
+      const res = await request.post(
+        `/${isUser ? "user" : "company"}/login`,
+        userData
+      );
       setCurrentUser(res?.data?.data?.user);
       console.log(res);
     } catch (error) {
@@ -200,6 +205,24 @@ const Login = ({ setCurrentUser }) => {
                     </button>
                   </div>
                 </form>
+                <p className="mt-4 text-sm text-gray-500 sm:mt-0 ">
+                  {isUser ? (
+                    <span
+                      className="text-gray-700 underline cursor-pointer"
+                      onClick={() => setIsUser((p) => !p)}
+                    >
+                      I am Hiring
+                    </span>
+                  ) : (
+                    <span
+                      className="text-gray-700 underline cursor-pointer"
+                      onClick={() => setIsUser((p) => !p)}
+                    >
+                      I want to get Hired
+                    </span>
+                  )}
+                  .
+                </p>
               </div>
             </main>
           </div>

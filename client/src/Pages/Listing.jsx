@@ -64,9 +64,8 @@ const Notification = () => {
    </div>
       <p>‎</p>
    <div >
-   
-      <div class="bg-gray-100  border-gray-500 border rounded-sm  text-gray-700 mb-0.5">
-         <div class="flex p-3   border-l-8 border-red-600">
+      <div class="bg-gray-100 mx-auto border-gray-500 border rounded-sm  text-gray-700 mb-0.5">
+         <div class="flex p-3 mx-auto  border-l-8 border-red-600">
          <div class="pb-1 md:pb-1 w-full md:w-40">
           <img
                   className="w-full hidden md:block"

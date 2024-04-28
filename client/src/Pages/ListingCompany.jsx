@@ -3,17 +3,17 @@ import React from "react";
 // import Animation4 from "../files/Animation4.json";
 
 const Notification = () => {
-  //   const options = {
-  //     animationData: Animation4,
-  //     style: {
-  //       margin: "auto",
-  //       width: "300px",
-  //     },
-  //   };
-  //   const { View } = useLottie(options);
+//   const options = {
+//     animationData: Animation4,
+//     style: {
+//       margin: "auto",
+//       width: "300px",
+//     },
+//   };
+//   const { View } = useLottie(options);
   return (
     <div className="h-screen bg-base-100  bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
-      <div class="h-screen grid place-items-center my-8">
+     <div class="h-screen grid place-items-center my-8">
         <div class="lg:w-2/5 sm:w-3/5 w-11/12 bg-gray-100 dark:bg-gray-800 rounded-xl mx-auto border p-10 shadow-sm">
           <div class="inline-flex items-center justify-between w-full">
             <h3 class="font-bold text-xl sm:text-2xl text-gray-800 dark:text-white">

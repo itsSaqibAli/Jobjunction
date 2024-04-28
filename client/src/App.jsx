@@ -8,6 +8,10 @@ import Company from "./Pages/Company";
 import PD from "./Pages/PD";
 import ThanksPage from "./Pages/ThanksPage";
 import Notification from "./Pages/Notification";
+import ErrorPage from "./Pages/ErrorPage";
+import EnrollDetail from "./Pages/EnrollDetail";
+import ListingCompany from "./Pages/ListingCompany";
+import Form from "./Pages/Form";
 import User from "./Pages/User";
 import { useState } from "react";
 
@@ -33,6 +37,10 @@ function App() {
         <Route path="/pd" element={<PD />}></Route>
         <Route path="/thankspage" element={<ThanksPage />}></Route>
         <Route path="/notification" element={<Notification />}></Route>
+        <Route path="/errorpage" element={<ErrorPage />}></Route>
+        <Route path="/enrolldetail" element={<EnrollDetail />}></Route>
+        <Route path="/form" element={<Form />}></Route>
+        <Route path="/listingcompany" element={<ListingCompany />}></Route>
       </Routes>
     </>
   );

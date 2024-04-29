@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import Navbar from "../Components/Navbar";
+
 
 const Product3 = () => {
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
 
     return (
+        <div>
+           <Navbar/>
+
         <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
             <div className="xl:w-2/6 lg:w-2/5 w-80 ">
                 <img className="w-full" alt="img of a girl posing" src="https://images.pexels.com/photos/5417844/pexels-photo-5417844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
@@ -24,7 +29,7 @@ const Product3 = () => {
 							mt-2
 						"
                     >
-                        udne ki website
+                        Google intership program
                     </h1>
                 </div>
                
@@ -107,6 +112,7 @@ const Product3 = () => {
                 </div>
                 
             </div>
+        </div>
         </div>
     );
 };

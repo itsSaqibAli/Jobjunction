@@ -1,10 +1,13 @@
 import React from "react";
 import { PiPhoneCallThin } from "react-icons/pi";
+import Navbar from "../Components/Navbar";
+
 
 const EnrollDetail = () => {
   return (
   
 <div class="py-14 bg-base-100 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
+<Navbar/>
 <section className="  p-10 flex flex-wrap items-center justify-evenly">
                 <div className="mt-2 mt-lg-auto">
                   <h1
@@ -39,8 +42,8 @@ const EnrollDetail = () => {
           </div>
           <div class="border-b border-gray-200 md:flex-row flex-col flex justify-between items-start w-full pb-8 space-y-4 md:space-y-0">
             <div class="w-full flex flex-col justify-start items-start space-y-8">
-              <h3 class="text-xl dark:text-white xl:text-2xl font-semibold leading-6 text-gray-800"> Udne ki gym</h3>
-              <p className="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 mt-7">Ham react use krke ud skte hai coz react hai bhyiii.</p>
+              <h3 class="text-xl dark:text-white xl:text-2xl font-semibold leading-6 text-gray-800"> Google internship program</h3>
+              <p className="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 mt-7">front end development using react html tailwind css.</p>
               <div class="flex justify-start items-start flex-col space-y-2">
                     <p className="text-base leading-4 mt-7 text-gray-600">Deadline: 1 June</p>
                     <p className="text-base leading-4 mt-4 text-gray-600">Publised-Date: 12-March </p>

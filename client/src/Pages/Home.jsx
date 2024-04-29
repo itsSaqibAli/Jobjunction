@@ -1,8 +1,12 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
+import {Link} from "react-router-dom";
+
 
 const Home = () => {
   return (
     <main>
+      <Navbar/>
     <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
         style={{
           minHeight: "75vh"
@@ -20,7 +24,9 @@ const Home = () => {
                 <h1 className="text-white  custom-link mb-2 text-6xl font-extrabold   md:text-5xl lg:text-6xl   text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400  font-hihi">
                   PLACEMENT !! <br></br> <strong className="text-4xl">In Tier 3 college</strong>
                 </h1>
-                <button className="btn btn-info p-3 bg-cyan-300 text-black rounded-full">Start Projeccts</button>
+                
+                <Link to="/domains" className="btn btn-info p-3 bg-cyan-300 text-black rounded-full">Start Projeccts</Link>
+                
               </div>
             </div>
 
@@ -133,7 +139,7 @@ const Home = () => {
                 >
                   
                 </svg>
-                <h4 className="text-xl text-center font-bold text-white">
+                <h4 className="text-xl text-center font-bold text-black">
                   "Be Skillfull"
                 </h4>
                 
@@ -221,7 +227,7 @@ const Home = () => {
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-gray-600">Try t compelete it with team</h4>
+                      <h4 className="text-gray-600">Try t0 compelete it with team</h4>
                     </div>
                   </div>
                 </li>

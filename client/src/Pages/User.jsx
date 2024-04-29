@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "../Components/Navbar";
 
 function User() {
   return (
     <main className=" w-full min-h-screen py-1  text-sm bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]   border-dotted border-gray-300">
+      <Navbar/>
       <div className="p-2 md:p-4">
         <div class="flex flex-row min-h-screen justify-center items-center">
           <div className="w-full justify-center m-6 items-center  border-base-200 border-2 border-dotted px-6 pb-8 mt-8 sm:max-w-xl sm:rounded-lg">
@@ -10,14 +12,14 @@ function User() {
               href="#"
               className="custom-link mb-2 text-6xl pl-6 font-extrabold text-gray-900  md:text-4xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 font-hihi"
             >
-              huihui's Profile
+              SHASHI's Profile
               <i className="bi-arrow-right ms-2"></i>
             </h1>
             <h1
               href="#"
               className="custom-link mb-2 text-xl pl-6 font-extrabold text-gray-900  md:text-xl lg:text-2xl  bg-clip-text  to-emerald-600 from-sky-400 font-hihi"
             >
-              Project count- hihihuhu
+              Project count- 6
               <i className="bi-arrow-right ms-2"></i>
             </h1>
 
@@ -84,10 +86,10 @@ function User() {
                 />
                 <div>
                   <h3 class="text-base font-semibold text-gray-900">
-                    udne ka project
+                    Google intership program
                   </h3>
                   <span class="block text-xs font-normal text-gray-500">
-                    Googlu
+                    Google
                   </span>
                 </div>
               </div>
@@ -124,10 +126,10 @@ function User() {
                 />
                 <div>
                   <h3 class="text-base font-semibold text-gray-900">
-                    udne ka project
+                    Google intership program
                   </h3>
                   <span class="block text-xs font-normal text-gray-500">
-                    Googlu
+                    Google
                   </span>
                 </div>
               </div>
@@ -155,15 +157,15 @@ function User() {
               <div class="flex items-center">
                 <img
                   class="mr-2 h-10 w-10 rounded-full object-cover"
-                  src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5f/ea/30/5fea30db-2245-01bb-061c-549142de00f1/logo_gsa_ios_color-0-1x_U007emarketing-0-0-0-6-0-0-0-85-220-0.png/1200x630wa.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi3_2HIVPgp_YI6DVWKrY0HsOAaF27dZ4BM10r_yuA2w&s"
                   alt="profile"
                 />
                 <div>
                   <h3 class="text-base font-semibold text-gray-900">
-                    udne ka project
+                  Uber intership program
                   </h3>
                   <span class="block text-xs font-normal text-gray-500">
-                    Googlu
+                    Google
                   </span>
                 </div>
               </div>
@@ -191,15 +193,15 @@ function User() {
               <div class="flex items-center">
                 <img
                   class="mr-2 h-10 w-10 rounded-full object-cover"
-                  src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5f/ea/30/5fea30db-2245-01bb-061c-549142de00f1/logo_gsa_ios_color-0-1x_U007emarketing-0-0-0-6-0-0-0-85-220-0.png/1200x630wa.png"
+                  src="https://images-platform.99static.com/2O9tolxB92t5LBe355LylWQqox8=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/87/87744/attachment_87744242"
                   alt="profile"
                 />
                 <div>
                   <h3 class="text-base font-semibold text-gray-900">
-                    udne ka project
+                  Tasex intership program
                   </h3>
                   <span class="block text-xs font-normal text-gray-500">
-                    Googlu
+                    Google
                   </span>
                 </div>
               </div>

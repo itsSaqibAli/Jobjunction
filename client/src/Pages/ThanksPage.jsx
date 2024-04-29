@@ -1,6 +1,8 @@
 import React from "react";
 // import { useLottie } from "lottie-react";
 // import Animation4 from "../files/Animation4.json";
+import Navbar from "../Components/Navbar";
+
 
 const ThankYouPage = () => {
 //   const options = {
@@ -13,6 +15,7 @@ const ThankYouPage = () => {
 //   const { View } = useLottie(options);
   return (
     <div className="h-screen bg-base-100 mx-auto grid place-items-center text-center px-8 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+      <Navbar/>
       <div class="bg-transparent h-screen">
         <div class="bg-base-100 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] p-6  md:mx-auto">
           <section className="  p-10 flex flex-wrap items-center justify-evenly">

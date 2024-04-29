@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { GiPlasticDuck } from "react-icons/gi";
 import { FaJ } from "react-icons/fa6";
 import { request } from "../requestMethods";
+import Navbar from "../Components/Navbar";
 
 //todo: if already logged in, go to home page
 const Login = ({ setCurrentUser }) => {
@@ -29,6 +30,7 @@ const Login = ({ setCurrentUser }) => {
     <section className="sign-in-form section-padding ">
       <section class="bg-white ">
         <section class="bg-white ">
+          <Navbar/>
           <div class="lg:grid lg:min-h-screen bg-base-100 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] lg:grid-cols-12">
             <section class="relative flex h-32 items-end  lg:col-span-5 border-r-2 border-dotted lg:h-full xl:col-span-6">
               <img

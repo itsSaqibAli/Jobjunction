@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
+
 // import { useLottie } from "lottie-react";
 // import Animation4 from "../files/Animation4.json";
 
@@ -13,6 +15,7 @@ const Notification = () => {
   //   const { View } = useLottie(options);
   return (
     <div className="h-screen bg-base-100  bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+      <Navbar/>
       <div class="h-screen grid place-items-center my-8">
         <div class="lg:w-2/5 sm:w-3/5 w-11/12 bg-gray-100 dark:bg-gray-800 rounded-xl mx-auto border p-10 shadow-sm">
           <div class="inline-flex items-center justify-between w-full">
@@ -33,7 +36,7 @@ const Notification = () => {
                   class="w-10 h-10 mr-3"
                 />
                 <h3 class="font-bold text-base text-gray-800">
-                  Udne ki website
+                  Google intership program
                 </h3>
               </div>
               <p class="text-xs text-gray-500">12:47</p>
@@ -57,7 +60,7 @@ const Notification = () => {
                   class="w-10 h-10 mr-3"
                 />
                 <h3 class="font-bold text-base text-gray-800">
-                  Udne ki website
+                  Google intership program
                 </h3>
               </div>
               <p class="text-xs text-gray-500">12:47</p>
@@ -81,7 +84,7 @@ const Notification = () => {
                   class="w-10 h-10 mr-3"
                 />
                 <h3 class="font-bold text-base text-gray-800">
-                  Udne ki website
+                  Google intership program
                 </h3>
               </div>
               <p class="text-xs text-gray-500">12:47</p>
@@ -105,7 +108,7 @@ const Notification = () => {
                   class="w-10 h-10 mr-3"
                 />
                 <h3 class="font-bold text-base text-gray-800">
-                  Udne ki website
+                  Google intership program
                 </h3>
               </div>
               <p class="text-xs text-gray-500">12:47</p>

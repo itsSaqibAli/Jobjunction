@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaJ } from "react-icons/fa6";
 import { request } from "../requestMethods";
+import Navbar from "../Components/Navbar";
 
 //todo: check if all fields are filled
 const Signup = ({ setCurrentUser }) => {
@@ -25,6 +26,8 @@ const Signup = ({ setCurrentUser }) => {
   return (
     <section className=" bg-base-100 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
       <div className="">
+        
+      <Navbar/>
         <div className=""></div>
       </div>
       <section className="bg-base-100 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">

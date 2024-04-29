@@ -10,7 +10,7 @@ import ThanksPage from "./Pages/ThanksPage";
 import Notification from "./Pages/Notification";
 import ErrorPage from "./Pages/ErrorPage";
 import EnrollDetail from "./Pages/EnrollDetail";
-import ListingCompany from "./Pages/ListingCompany";
+// import ListingCompany from "./Pages/ListingCompany";
 import Form from "./Pages/Form";
 import User from "./Pages/User";
 import { useEffect, useState } from "react";
@@ -45,7 +45,7 @@ function App() {
         <Route path="/errorpage" element={<ErrorPage />}></Route>
         <Route path="/enrolldetail" element={<EnrollDetail />}></Route>
         <Route path="/form" element={<Form />}></Route>
-        <Route path="/listingcompany" element={<ListingCompany />}></Route>
+        {/* <Route path="/listingcompany" element={<ListingCompany />}></Route> */}
       </Routes>
     </>
   );

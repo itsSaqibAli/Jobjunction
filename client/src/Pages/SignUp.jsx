@@ -5,7 +5,7 @@ import { request } from "../requestMethods";
 import Navbar from "../Components/Navbar";
 
 //todo: check if all fields are filled
-const Signup = ({ setCurrentUser }) => {
+const Signup = ({ currentUser, setCurrentUser }) => {
   const [userData, setUserData] = useState({});
   const [isUser, setIsUser] = useState(true);
 

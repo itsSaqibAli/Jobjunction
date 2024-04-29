@@ -8,7 +8,7 @@ import { request } from "../requestMethods";
 import Navbar from "../Components/Navbar";
 
 //todo: if already logged in, go to home page
-const Login = ({ setCurrentUser }) => {
+const Login = ({ currentUser, setCurrentUser }) => {
   const [userData, setUserData] = useState({});
   const [isUser, setIsUser] = useState(true);
 
